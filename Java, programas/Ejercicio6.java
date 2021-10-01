@@ -4,7 +4,6 @@ public class Ejercicio6 {
     public static void main(String[] args) {
         
         double radius ;
-        double pi ;
         double length ;
         double area ;
 
@@ -13,7 +12,7 @@ public class Ejercicio6 {
         
         System.out.println("Enter the radius:") ;
         radius = inputValue.nextFloat() ;
-        pi = 3.14 ;
+        final double pi = 3.14159 ;
 
         inputValue.close() ;
 
