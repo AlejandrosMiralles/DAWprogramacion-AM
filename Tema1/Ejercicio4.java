@@ -9,7 +9,10 @@ class Ejercicio4{
 
 	Scanner inputValue;
 	inputValue = new Scanner (System.in);
+
 	side =  inputValue.nextFloat();
+
+	inputValue.close() ;
 
 	squarearea= side * side;
 	System.out.println(squarearea);
