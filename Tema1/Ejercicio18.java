@@ -4,28 +4,35 @@ import java.util.Scanner ;
 
 public class Ejercicio18 {
     public static void main(String[] args) {
-        byte hora, minuto, segundo ;
+        int hora, minuto, segundo ;
         Scanner lector = new Scanner(System.in) ;
 
-        hora= lector.nextByte() ;
-        minuto = lector.nextByte() ;
-        segundo = lector.nextByte() ;
+        System.out.println("Escribeme una hora, un minuto y un segundo, en ese orden:") ;
 
-        segundo = segundo + 1 ;
+        hora= lector.nextInt() ;
+        minuto = lector.nextInt() ;
+        segundo = lector.nextInt() ;        
 
-        if (segundo == 60){
-            segundo = 0 ;
-            minuto = minuto + 1 ;
+        lector.close();
 
-            if (minuto == 60){
-                minuto = 0 ;
-                hora= hora + 1 ;
+        if (segundo>=60 || minuto>=60){
+            System.out.println("Los segundos y los minutos, lógicamente, no pueden superar las 60 unidades.") ;
+
+        }else{
+            segundo = ++segundo ;
+
+            
+            if (segundo == 60){ 
+                segundo = 0 ;
+                minuto = ++minuto ;
+
+                if (minuto == 60){
+                    minuto = 0 ;
+                    hora= ++hora ;
+                }
             }
-        }
-
-
-
-
+            System.out.println("El tiempo es: "+hora+" horas, "+minuto+" minutos, "+segundo+" segundos.") ;
+        }    
     }
     
 }
