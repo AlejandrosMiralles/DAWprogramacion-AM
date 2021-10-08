@@ -19,16 +19,16 @@ public class Ejercicio18 {
             System.out.println("Los segundos y los minutos, lógicamente, no pueden superar las 60 unidades.") ;
 
         }else{
-            segundo = ++segundo ;
+            ++segundo ;
 
             
             if (segundo == 60){ 
                 segundo = 0 ;
-                minuto = ++minuto ;
+                ++minuto ;
 
                 if (minuto == 60){
                     minuto = 0 ;
-                    hora= ++hora ;
+                    ++hora ;
                 }
             }
             System.out.println("El tiempo es: "+hora+" horas, "+minuto+" minutos, "+segundo+" segundos.") ;
